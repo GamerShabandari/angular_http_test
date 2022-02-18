@@ -1,0 +1,8 @@
+<div>
+    <input type="text" placeholder="search for a movie" #searchInput (input)="searchForMovie(searchInput.value)">
+    <input type="text" placeholder="search for a movie" #searchInput2 (input)="search(searchInput2.value)">
+</div>
+
+<div *ngFor="let movie of movies|async">
+    {{movie.Title}}
+</div>
